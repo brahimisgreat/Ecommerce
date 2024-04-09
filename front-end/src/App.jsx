@@ -1,10 +1,12 @@
 import './App.css'
+import { Navigation } from './Components/Navigation'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
   return (
     <div>
-  <h1>Welcome To Proshop</h1>
+    <Navigation />
     </div>
   )
 }
