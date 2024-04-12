@@ -1,0 +1,7 @@
+.app{
+    border: solid blue;
+}
+.containerr{
+    display: flex;
+    justify-content: flex-start;
+}
