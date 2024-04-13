@@ -11,13 +11,13 @@ import { useState } from "react";
 
 function App() {
 
-const [categories, setCategories] = useState('');
+const [categories, setCategories] = useState('jewelery');
 
   return (
     <div className="app">
       <Navigation />
       <div className="containerr">
-        <SideNav  setCategories={setCategories}/>
+        <SideNav  setCategories={setCategories} categories={categories}/>
         <div className="content">
           <Routes>
             <Route path="/" element={<AllProducts />} />

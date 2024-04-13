@@ -1,22 +1,19 @@
 import { Button } from "react-bootstrap";
-import {useNavigate} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-export const SideNav = ({setCategories}) => {
+export const SideNav = ({ setCategories, categories }) => {
 
-    const navigate = useNavigate();
-
-    function handleClick(cat) {
-        setCategories(cat);
-        navigate(`/product/Categories`)
-        
-    }
+  
   return (
     <div>
       <h4>Filter by categories</h4>
-      <Button variant="light" onClick={handleClick('mens')} >Men's</Button>
-      <Button variant="light">Women's</Button>
-      <Button variant="light">Jewlery</Button>
-      <Button variant="light">Electronics</Button>
+      <div>
+      <Button variant="light" onClick={() =>{setCategories(`men's clothing`),console.log(categories)} }>Men's</Button>
+      <Button variant="light" onClick={() =>{setCategories(`women's clothing`),console.log(categories)} }>Women's</Button>
+      <Button variant="light" onClick={() =>{setCategories('jewlery'),console.log(categories)} }>Jewlery</Button>
+      <Button variant="light" onClick={() =>{setCategories('electronics'),console.log(categories)} }>Electronics</Button>
+      </div>
+      <Button><Link to="/product/Categorys">filter items</Link></Button>
     </div>
   );
 };
