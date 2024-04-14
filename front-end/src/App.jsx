@@ -5,8 +5,11 @@ import { Routes, Route } from "react-router-dom";
 import { AllProducts } from "./Pages/AllProducts";
 import { ProductDetails } from "./Pages/ProductDetails";
 import { SideNav } from "./Components/SideNav";
-import { Categorys } from "./Pages/Categorys";
 import { useState } from "react";
+import { Electronics } from "./Pages/filters/Electronics";
+import Jewelery from "./Pages/filters/Jewelery";
+import Womens from "./Pages/filters/Womens";
+import Mens from "./Pages/filters/Mens";
 
 
 function App() {
@@ -22,7 +25,10 @@ const [categories, setCategories] = useState('jewelery');
           <Routes>
             <Route path="/" element={<AllProducts />} />
             <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/product/Categorys" element={<Categorys categories={categories} />} />
+            <Route path="/product/categorys/electronics" element={<Electronics />} />
+            <Route path="/product/categorys/jewelery" element={<Jewelery />} />
+            <Route path="/product/categorys/womens" element={<Womens />} />
+            <Route path="/product/categorys/mens" element={<Mens />} />
           </Routes>
         </div>
       </div>

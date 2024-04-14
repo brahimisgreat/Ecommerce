@@ -8,12 +8,11 @@ export const SideNav = ({ setCategories, categories }) => {
     <div>
       <h4>Filter by categories</h4>
       <div>
-      <Button variant="light" onClick={() =>{setCategories(`men's clothing`),console.log(categories)} }>Men's</Button>
-      <Button variant="light" onClick={() =>{setCategories(`women's clothing`),console.log(categories)} }>Women's</Button>
-      <Button variant="light" onClick={() =>{setCategories('jewlery'),console.log(categories)} }>Jewlery</Button>
-      <Button variant="light" onClick={() =>{setCategories('electronics'),console.log(categories)} }>Electronics</Button>
+      <Button variant="light"><Link to="/product/categorys/mens">Men's</Link></Button>
+      <Button variant="light"><Link to="/product/categorys/womens">Women's</Link></Button>
+      <Button variant="light"><Link to="/product/categorys/jewelery">jewelery</Link></Button>
+      <Button variant="light"><Link to="/product/categorys/electronics">electronics</Link></Button>
       </div>
-      <Button><Link to="/product/Categorys">filter items</Link></Button>
     </div>
   );
 };
